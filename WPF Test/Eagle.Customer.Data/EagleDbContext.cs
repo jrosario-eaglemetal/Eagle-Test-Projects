@@ -6,7 +6,7 @@ namespace Eagle.CustomerApp.Data
 {
     public class EagleDbContext : DbContext
     {
-        DbSet<Customer> Customers { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         public EagleDbContext()
         {
@@ -22,7 +22,6 @@ namespace Eagle.CustomerApp.Data
                 DataSource = Path.Combine(GetDatabaseDirectory(), "EagleTestDb.db"),
                 Mode = SqliteOpenMode.ReadWriteCreate,
             };
-            Console.WriteLine(connectionString);
             optionsBuilder.UseSqlite(connectionString.ToString());
         }
 
@@ -33,7 +32,7 @@ namespace Eagle.CustomerApp.Data
         private string GetDatabaseDirectory()
         {
             var directory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            var wpfTextIndex = directory.LastIndexOf("WPF Test\\");
+            var wpfTextIndex = directory.LastIndexOf("WPF Test\\", StringComparison.CurrentCultureIgnoreCase);
             return Path.Combine(directory.Substring(0, wpfTextIndex + 8), "Database");
 
         }
