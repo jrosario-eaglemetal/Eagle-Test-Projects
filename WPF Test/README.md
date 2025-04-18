@@ -2,14 +2,12 @@
 
 **Goals**
 
- - Add additional models to the Entity Framework Database
- - Add a field so that a customer can be marked as active
+ - Add a property so that a customer can be marked as active or inactive
  - Add an address table so that customers can have multiple addresses
 	 - **Required Fields**
 		 - Street
 		 - City
-		 - State (For purposes of this test this can be 2 character free text
-   entry)
+		 - State (For purposes of this test this can be 2 character free text entry)
 		 - Zip
 	 - **Optional Fields**
 		 - Street2
