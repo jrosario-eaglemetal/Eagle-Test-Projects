@@ -12,6 +12,10 @@
 	 - **Optional Fields**
 		 - Street2
 - Create a user interface that can do the following
+	- View and select from a list of customers
+	- Delete a customer
+  	- View a list of addresses for a selected customer
+  	- Mark an address as the primary address
 	- Add a new customer
 	- Toggle if a customer is active
 	- Add additional addresses to a customer
